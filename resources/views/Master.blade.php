@@ -31,6 +31,41 @@
         height:500px;
         padding-top:100px;
     }
+
+    .slider-img{
+        height: 400px!important;
+    }
+
+    .custom-product{
+        height:600px;
+
+    }
+
+    .carousel-caption{
+        color: skyblue;
+    }
+
+    .trending-wrapper{
+        margin: 20px;
+    }
+
+    .trending-items{
+        float: left;
+        width: 20%;
+    }
+
+    .trending-img{
+        height: 100px;
+
+    }
+
+    .product-detail-img{
+        height:200px;
+    }
+
+    .search-box{
+        width: 500px!important;
+    }
 </style>
 
 <script>
