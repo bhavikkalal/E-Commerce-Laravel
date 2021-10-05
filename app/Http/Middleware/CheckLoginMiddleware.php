@@ -20,6 +20,11 @@ class CheckLoginMiddleware
 
             return redirect('/');
         }
+
+        if ($request->path()=="UserRegistration" && $request->session()->has('User')){
+
+            return redirect('/');
+        }
         return $next($request);
     }
 }

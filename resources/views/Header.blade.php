@@ -25,7 +25,7 @@ if (Session::has('User')){
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#"> Home </a></li>
-                <li class=""><a href="#"> Orders </a></li>
+                <li class=""><a href="ShowMyOrders"> Orders </a></li>
 
             </ul>
             <form action="/SearchProduct" class="navbar-form navbar-left">
@@ -51,6 +51,7 @@ if (Session::has('User')){
 
                 @else
                     <li><a href="/Login">Login</a></li>
+                    <li><a href="/UserRegistration">Register</a></li>
 
                 @endif
             </ul>

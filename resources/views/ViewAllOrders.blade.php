@@ -5,15 +5,15 @@
 
         <div class="row">
             <h1>
-                Cart List
+                Orders List
             </h1>
 
 
             <div class="col-sm-10">
-                <a class="btn btn-success" href="/OrderProduct">Order</a>
+                <a class="" href="/">Back</a>
                 <br>
                 <br>
-                @foreach($CartProducts as $item)
+                @foreach($AllOders as $item)
                     <div class="row Searched-items Cart-list-devider">
                         <div class="col-sm-3">
                             <a href="ProductDetail/{{$item->id}}">
@@ -24,23 +24,20 @@
                         <div class="col-sm-3">
                             <div class="">
                                 <h3>{{$item->name}}</h3>
-                                <h5>{{$item->description}}</h5>
+                                <h5><b>Delivery Status</b> :{{$item->status}}</h5>
+                                <h5><b>Payment Status</b> : {{$item->payment_status}}</h5>
+                                <h5><b>Payment Method</b> : {{$item->payment_method}}</h5>
+                                <h5><b>Delivery address</b> : {{$item->address}}</h5>
+                                <h5><b>Price </b> : {{$item->price}}</h5>
                             </div>
                         </div>
 
-                        <div class="col-sm-3">
-                            <form method="post" action="/RemoveFromCart">
-                                @csrf
-                                <input type="hidden" name="HiddenCartProductId" value="{{$item->cart_id}}">
-                                <button class="btn btn-info" name="RemoveFromCartButton">Remove From Cart</button>
-                            </form>
-                        </div>
+
                     </div>
-                <br>
-                <br>
+                    <br>
+                    <br>
 
                 @endforeach
-                <a class="btn btn-success" href="/OrderProduct">Order</a>
             </div>
 
 

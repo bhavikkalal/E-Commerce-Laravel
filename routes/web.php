@@ -22,6 +22,10 @@ Route::view("/Login" , "Login");
 
 Route::post('/Login' , [userController::class , 'Login']);
 
+Route::view('/UserRegistration' , 'UserRegistration');
+
+Route::post('/Registration' , [userController::class , 'Registration']);
+
 Route::get('/' , [productController::class , 'index']);
 
 Route::get('ProductDetail/{id}' , [productController::class , 'ProductDetail']);
@@ -37,10 +41,13 @@ Route::get('Logout', function(){
     return redirect('/Login');
 });
 
+Route::post('RemoveFromCart' , [productController::class , 'RemoveFromCart']);
 
+Route::get('OrderProduct' , [productController::class , 'OrderProduct']);
 
+Route::post('OrderNow' , [productController::class , 'OrderNow']);
 
-
+Route::get('ShowMyOrders' , [productController::class , 'ShowMyOrders']);
 
 
 
